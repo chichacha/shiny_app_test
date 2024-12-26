@@ -17,7 +17,7 @@ generate_plot <- function(angle=pi/6, sides=3, colors="264653-2a9d8f-e9c46a-f4a2
     mutate(
       y_odd = (y %% 2 == 0),
       idx = row_number() - 1,
-      x = if_else(y_odd, x + 1, x),
+      x = if_else(y_odd, x + 0.5, x),
       theta = atan2(y, x)
     )
   
